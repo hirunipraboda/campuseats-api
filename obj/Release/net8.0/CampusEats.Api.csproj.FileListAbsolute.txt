@@ -117,3 +117,4 @@ C:\Users\user\CampusEats.Api\obj\Release\net8.0\refint\CampusEats.Api.dll
 C:\Users\user\CampusEats.Api\obj\Release\net8.0\CampusEats.Api.pdb
 C:\Users\user\CampusEats.Api\obj\Release\net8.0\CampusEats.Api.genruntimeconfig.cache
 C:\Users\user\CampusEats.Api\obj\Release\net8.0\ref\CampusEats.Api.dll
+C:\Users\user\CampusEats.Api\obj\Release\net8.0\CampusEats.Api.sourcelink.json
