@@ -8,10 +8,13 @@ using Microsoft.IdentityModel.Tokens;
 using Npgsql;
 
 var builder = WebApplication.CreateBuilder(args);
+var renderConnectionString = Environment.GetEnvironmentVariable("ConnectionStrings__Default");
 var databaseUrl = builder.Configuration["DATABASE_URL"];
-var connectionString = !string.IsNullOrWhiteSpace(databaseUrl)
-    ? GetDatabaseConnectionString(databaseUrl)
-    : builder.Configuration.GetConnectionString("Default");
+var connectionString = !string.IsNullOrWhiteSpace(renderConnectionString)
+    ? renderConnectionString
+    : !string.IsNullOrWhiteSpace(databaseUrl)
+        ? GetDatabaseConnectionString(databaseUrl)
+        : builder.Configuration.GetConnectionString("Default");
 
 if (string.IsNullOrWhiteSpace(connectionString))
 {
